@@ -17,7 +17,7 @@ const Mercerdes = new Car("Mercerdes", 100);
 BMW.accelerate();
 BMW.accelerate();
 BMW.accelerate();
-console.log(BMW);
+console.log("xe " + BMW.make + " đi với tốc độ " + BMW.speed);
 
 Mercerdes.brake();
-console.log(Mercerdes);
+console.log("xe " + Mercerdes.make + " đi với tốc độ " + Mercerdes.speed);
