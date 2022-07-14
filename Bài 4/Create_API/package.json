@@ -1,0 +1,17 @@
+{
+  "name": "create_api",
+  "version": "1.0.0",
+  "description": "learning API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Vang Quang Thuan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
