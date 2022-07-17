@@ -1,0 +1,12 @@
+html
+head
+    title Form
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", rel="stylesheet")
+body
+    div.container
+        .card(style = "margin-top: 5%;")
+            h3.card-header Tên: #{body.firstName}  #{body.lastName}
+            h3.card-header Birthday: #{body.birthday}
+            h3.card-header Email: #{body.email}
+            h3.card-header Phone number: #{body.phoneNumber}

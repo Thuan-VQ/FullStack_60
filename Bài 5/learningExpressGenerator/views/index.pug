@@ -1,0 +1,38 @@
+html
+head
+    title #{title}
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", rel="stylesheet")
+body
+    div.container
+        .card(style = "margin-top: 5%;")
+            h3.card-header Xử lý Form
+            .card-body
+                form(action="/user-info", method="post", enctype="application/x-www-form-urlencoded")
+                    .form-group
+                        .Row
+                            .Col
+                                label(for="Firstname") Firstname
+                                input.form-control(type="text", name="firstName", required)
+                            .Col
+                                label(for="Lastname") Lastname
+                                input.form-control(type="text", name="lastName", required)
+                    .form-group
+                        .Row
+                            .Col
+                                label(for="Birthday") Birthday
+                                input.form-control(type="date", name="birthday", required)
+                            .Col 
+                                label(for="gender") Giới tính
+                                select.form-control(name="gender", required)
+                                    option(value="Nam") Nam
+                                    option(value="Nữ") Nữ
+                    .form-group
+                        .Row
+                            .Col
+                                label(for="email") Email
+                                input.form-control(type="text", name="email", required)
+                            .Col 
+                                label(for="phoneNumber") Phone Number
+                                input.form-control(type="number", name="phoneNumber", required)
+                    button.btn.btn-success(type="submit") Submit 
