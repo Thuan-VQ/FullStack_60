@@ -9,10 +9,10 @@ const getAllProduct = asyncHandler( async (req, res) => {
 
 // API create new Products (Admin)
 const createNewPorduct = asyncHandler ( async (req, res) => {
-    const {user, name, image, brand, category, description, rating, numReview, price, countInStock} = req.body;
+    const {user, name, image, brand, category, description, rating, review, numReview, price, countInStock} = req.body;
     
     //save to database
-    const newProduct = await Product.create({user, name, image, brand, category, description, rating, numReview, price, countInStock });
+    const newProduct = await Product.create({user, name, image, brand, review, category, description, rating, numReview, price, countInStock });
     if (newProduct) {
         res.status(200).json({
             _id: newProduct._id,
@@ -22,6 +22,7 @@ const createNewPorduct = asyncHandler ( async (req, res) => {
             brand: newProduct.brand,
             description: newProduct.description,
             category: newProduct.category,
+            review: newProduct.review,
             rating: newProduct.rating,
             numReview: newProduct.numReview,
             price: newProduct.price,
@@ -47,6 +48,7 @@ const getProductById = asyncHandler ( async (req, res) => {
             description: product.description,
             category: product.category,
             rating: product.rating,
+            review: product.review,
             numReview: product.numReview,
             price: product.price,
             countInStock: product.countInStock
@@ -84,6 +86,7 @@ const updateProductById = asyncHandler ( async (req, res) => {
         product.description = req.body.description || product.description
         product.category = req.body.category || product.category
         product.rating = req.body.rating || product.rating
+        product.review = req.body.review || product.review
         product.numReview = req.body.numReview || product.numReview
         product.price = req.body.price || product.price
         product.countInStock = req.body.countInStock || product.countInStock
@@ -98,6 +101,7 @@ const updateProductById = asyncHandler ( async (req, res) => {
             description: updateProduct.description,
             category: updateProduct.category,
             rating: updateProduct.rating,
+            review: updateProduct.review,
             numReview: updateProduct.numReview,
             price: updateProduct.price,
             countInStock: updateProduct.countInStock
