@@ -68,19 +68,11 @@ export default function MemberForm() {
                     </Popconfirm>
                 </Col>
 
-                <Form.Item
-                    label="Name"
-                    name="Name"
-                    rules={[{ required: true, message: 'Please input your name!' }]}
-                >
+                <Form.Item label="Name" name="Name" rules={[{ required: true, message: 'Please input your name!' }]}>
                     <Input type='text' onChange={(event) => setName(event.target.value)} />
                 </Form.Item>
 
-                <Form.Item
-                    label="Age"
-                    name="Age"
-                    rules={[{ required: true, message: 'Please input your age!' }]}
-                >
+                <Form.Item label="Age" name="Age" rules={[{ required: true, message: 'Please input your age!' }]}>
                     <Input type='number' min={1} max={100} onChange={(event) => setAge(event.target.value)} />
                 </Form.Item>
 
@@ -92,36 +84,22 @@ export default function MemberForm() {
                     </Radio.Group>
                 </Form.Item>
 
-                <Form.Item
-                    label="Address"
-                    name="Adress"
-                    rules={[{ required: true, message: 'Please input your address!' }]}
-                >
+                <Form.Item label="Address" name="Adress" rules={[{ required: true, message: 'Please input your address!' }]}>
                     <Input type='text' onChange={(event) => setAddress(event.target.value)} />
                 </Form.Item>
 
-                <Form.Item
-                    label="Phone"
-                    name="Phone"
-                    rules={[{ required: true, message: 'Please input your phone !' }]}
-                >
+                <Form.Item label="Phone" name="Phone" rules={[{ required: true, message: 'Please input your phone !' }]}>
                     <Input type='number' />
                 </Form.Item>
 
-                <Form.Item
-                    label="Hobby"
-                    name="Hobby"
-                >
+                <Form.Item label="Hobby" name="Hobby">
                     <Checkbox> Soccer </Checkbox>
                     <Checkbox> Volleyball </Checkbox>
                     <Checkbox> Baseball </Checkbox>
                     <Checkbox> Basketball </Checkbox>
                 </Form.Item>
 
-                <Form.Item
-                    label="Self Introduction"
-                    name="Self Introduction"
-                >
+                <Form.Item label="Self Introduction" name="Self Introduction">
                     <TextArea rows={4} />
                 </Form.Item>
 
